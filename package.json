@@ -1,0 +1,19 @@
+{
+  "name": "az-iot-diag",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint --show-non-errors .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0"
+  }
+}

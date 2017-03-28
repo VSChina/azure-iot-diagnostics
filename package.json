@@ -13,7 +13,9 @@
     "jshint": "^2.9.4"
   },
   "dependencies": {
+    "azure-iothub": "^1.1.8",
     "colors": "^1.1.2",
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "uuid": "^3.0.1"
   }
 }

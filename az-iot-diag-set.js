@@ -31,5 +31,6 @@ if (!program.enable && !program.sample_rate) {
   process.exit(1);
 }
 
-var iotHubJobClient = new IotHubJobClient('HostName=iot-hub-hendry.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=FE98m4TB4e5J/RzCpgtMV8+WXiXuZeRnBN8WzlaZTJQ=', program.devices);
+var iotHubJobClient = new IotHubJobClient('HostName=iot-hub-hendry.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=FE98m4TB4e5J/RzCpgtMV8+WXiXuZeRnBN8WzlaZTJQ=',
+  program.devices, program.enable, program.sample_rate);
 iotHubJobClient.start();

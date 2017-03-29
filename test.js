@@ -1,5 +1,5 @@
 "use strict";
-var program = require('commander');
+let program = require('commander');
  
 program
   .version('0.0.1')
@@ -12,7 +12,7 @@ program
   .description('run setup commands for all envs')
   .option("-s, --setup_mode [mode]", "Which setup mode to use")
   .action(function(env, options){
-    var mode = options.setup_mode || "normal";
+    let mode = options.setup_mode || "normal";
     env = env || 'all';
     console.log('setup for %s env(s) with %s mode', env, mode);
   });

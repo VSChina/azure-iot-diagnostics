@@ -1,7 +1,7 @@
 'use strict';
-var program = require('commander');
-var IotHubJobClient = require('./job-client').IotHubJobClient;
-require('colors');
+let program = require('commander');
+let IotHubJobClient = require('./job-client').IotHubJobClient;
+let Utility = require('./utility');
 
 function list(val) {
   return val.split(',');
@@ -15,22 +15,21 @@ program
   .option('-d, --devices <devices>', 'A device list', list)
   .parse(process.argv);
 
-console.log(program.login);
-console.log(program.enable);
-console.log(program.sample_rate);
-console.log(program.devices);
-console.log(program.args);
-
 if (!program.login) {
-  console.log('You must provide a connection string using the --login argument.'.red);
-  process.exit(1);
+  Utility.printError('You must provide a connection string using the --login argument.');
 }
 
 if (!program.enable && !program.sample_rate) {
-  console.log('You must provide diagnostics settings using the --enable or --sample_rate argument.'.red);
-  process.exit(1);
+  Utility.printError('You must provide diagnostics settings using the --enable or --sample_rate argument.');
 }
 
-var iotHubJobClient = new IotHubJobClient('HostName=iot-hub-hendry.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=FE98m4TB4e5J/RzCpgtMV8+WXiXuZeRnBN8WzlaZTJQ=',
-  program.devices, program.enable, program.sample_rate);
+if (program.enable && ['true', 'false'].indexOf(program.enable.toLowerCase()) === -1) {
+  Utility.printError('Only "true" or "false" are valid for --enable option');
+}
+
+if (program.sample_rate && !(program.sample_rate >= 0 && program.sample_rate <= 100)) {
+  Utility.printError('Sample rate must be between 0 and 100');
+}
+
+let iotHubJobClient = new IotHubJobClient(program.login, program.devices, program.enable, program.sample_rate);
 iotHubJobClient.start();

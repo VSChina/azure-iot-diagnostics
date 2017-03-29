@@ -1,6 +1,6 @@
 "use strict";
-var program = require('commander');
-var packageJson = require('./package.json');
+let program = require('commander');
+let packageJson = require('./package.json');
 
 program
   .version(packageJson.version)

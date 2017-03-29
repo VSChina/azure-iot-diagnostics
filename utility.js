@@ -1,4 +1,5 @@
 'use strict';
+
 require('colors');
 
 class Utility {

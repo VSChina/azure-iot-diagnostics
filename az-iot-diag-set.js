@@ -1,4 +1,5 @@
 'use strict';
+
 let program = require('commander');
 let IotHubJobClient = require('./job-client').IotHubJobClient;
 let Utility = require('./utility');

@@ -1,4 +1,7 @@
-"use strict";
+#!/usr/bin/env node
+
+'use strict';
+
 let program = require('commander');
 let packageJson = require('./package.json');
 

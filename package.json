@@ -1,14 +1,16 @@
 {
-  "name": "az-iot-diag",
-  "version": "0.0.9",
-  "description": "",
+  "name": "azure-iot-diagnostics",
+  "version": "0.0.1",
+  "description": "An easier way to set diagnostics configuration for your Azure IoT Solutions.",
   "main": "az-iot-diag.js",
-  "bin": "az-iot-diag.js",
+  "bin": {
+    "az-iot-diag": "az-iot-diag.js"
+  },
   "scripts": {
     "lint": "jshint --show-non-errors .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "formulahendry",
   "license": "MIT",
   "devDependencies": {
     "jshint": "^2.9.4"
@@ -18,5 +20,13 @@
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "uuid": "^3.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VSChina/azure-iot-diagnostics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VSChina/azure-iot-diagnostics/issues"
+  },
+  "homepage": "https://github.com/VSChina/azure-iot-diagnostics"
 }

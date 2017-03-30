@@ -9,11 +9,11 @@ function list(val) {
 }
 
 program
-  .description('Create a temporary session on your IoT hub')
+  .description('configure diagnostics setting')
   .option('-l, --login <connectionString>', 'use the connection string provided as argument to use to authenticate with your IoT hub')
-  .option('-e, --enable <enable>', 'whether to enable diagnostics')
-  .option('-s, --sample_rate <sample_rate>', 'set diagnostics sample rate', parseInt)
-  .option('-d, --devices <devices>', 'A device list', list)
+  .option('-e, --enable <enable>', 'whether to enable diagnostics: ture or false')
+  .option('-s, --sample_rate <sample_rate>', 'set diagnostics sample rate: 0..100', parseInt)
+  .option('-d, --devices <devices>', 'A device list: device1,device2,device3', list)
   .parse(process.argv);
 
 if (!program.login) {

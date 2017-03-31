@@ -1,5 +1,7 @@
 # Azure IoT Diagnostics
 
+[![Build status](https://ci.appveyor.com/api/projects/status/i5p4ggxd225wmm69?svg=true)](https://ci.appveyor.com/project/formulahendry/azure-iot-diagnostics)
+
 An easier way to set diagnostics configuration for your Azure IoT Solutions.
 
 ## Prerequisites

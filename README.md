@@ -4,6 +4,8 @@
 
 An easier way to set diagnostics configuration for your Azure IoT Solutions.
 
+Go to [https://aka.ms/azure.iot](https://aka.ms/azure.iot) for more awesome Azure IoT projects and resources.
+
 ## Prerequisites
 * [Node.js](https://nodejs.org/) v6.0.0 or higher
 

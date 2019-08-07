@@ -1,6 +1,6 @@
 {
   "name": "azure-iot-diagnostics",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An easier way to set diagnostics configuration for your Azure IoT Solutions.",
   "main": "az-iot-diag.js",
   "bin": {
